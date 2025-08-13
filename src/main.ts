@@ -18,7 +18,17 @@ const routes = [
     path: '/blog', 
     name: 'Blog', 
     component: () => import('../pages/Blog.vue')
-  }
+  },
+  {
+    path: '/kurslar',
+    name: 'course',
+    component: () => import('../pages/Courses.vue')
+  },  
+  {
+    path: '/xizmatlar',
+    name: 'course',
+    component: () => import('../pages/Service.vue')
+  },
 ]
 
 const router = createRouter({   

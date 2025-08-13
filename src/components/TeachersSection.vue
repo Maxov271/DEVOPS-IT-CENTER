@@ -87,7 +87,7 @@ export default {
           name: 'Aliyev Samandar',
           course: 'Frontend Development',
           avatar: '/assets/images/student__card-image.png',
-          comment: 'Bu kurslarda o\'qishdan oldin umuman coding bilmasdim. Hozir esa professional darajada React va Vue.js da ishlayapman. Mentorlar juda professional, har bir savolga batafsil javob berishadi.',
+          comment: 'Kursda o\'qishdan oldin umuman coding bilmasdim. Hozir esa professional darajada Vue.js da ishlayapman. Mentorlar professional, har bir savolga batafsil javob berishadi.',
           completionDate: 'Dekabr 2024',
           achievement: 'Ish topdi'
         },

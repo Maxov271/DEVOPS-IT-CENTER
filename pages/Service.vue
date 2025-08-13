@@ -5,7 +5,7 @@
 
     <!-- Header -->
     <div class="header">
-      <h2>Kurslarimiz</h2>
+      <h2>Xizmatlarimiz</h2>
     </div>
 
     <!-- Grid Container -->
@@ -53,91 +53,77 @@ export default {
       showAllCourses: false,
       windowWidth: window.innerWidth,
       courses: [
-        {
-          id: 1,
-          title: 'Kompyuter savodxonligi',
-          description: 'Microsoft Office dasturlari va asosiy kompyuter ko\'nikmalari',
-          icon: 'fas fa-desktop',
-          duration: '2 oy'
-        },
-        {
-          id: 2,
-          title: 'Moliya sohasida Excel',
-          description: 'Moliya sohasida ishlash uchun Excel dasturi',
-          icon: 'fas fa-chart-pie',
-          duration: '1.5 oy'
-        },
-        {
-          id: 3,
-          title: 'Foundation - IT ga kirish',
-          description: 'IT sohasiga kirish uchun asosiy bilimlar',
-          icon: 'fas fa-rocket',
-          duration: '3 oy'
-        },
-        {
-          id: 4,
-          title: 'Front-End dasturlash',
-          description: 'HTML, CSS, JavaScript asoslari',
-          icon: 'fab fa-html5',
-          duration: '4 oy'
-        },
-        {
-          id: 5,
-          title: 'Grafik va web-dizayn',
-          description: 'Zamonaviy dizayn texnologiyalari',
-          icon: 'fas fa-palette',
-          duration: '3 oy'
-        },
-        {
-          id: 6,
-          title: '3D Modeling',
-          description: '3D modellashtirish dasturlari',
-          icon: 'fas fa-cube',
-          duration: '4 oy'
-        },
-        {
-          id: 7,
-          title: 'SMM + Mediagrafiya',
-          description: 'Ijtimoiy tarmoqlar marketingi',
-          icon: 'fas fa-share-alt',
-          duration: '2 oy'
-        },
-        {
-          id: 8,
-          title: 'Robototexnika',
-          description: 'Zamonaviy robot texnologiyalari',
-          icon: 'fas fa-robot',
-          duration: '3 oy'
-        },
-        {
-          id: 9,
-          title: '1C Buxgalteriya',
-          description: 'Buxgalteriya hisobi dasturlari',
-          icon: 'fas fa-calculator',
-          duration: '2 oy'
-        },
-        {
-          id: 10,
-          title: 'IT English',
-          description: 'IT sohasida ingliz tili o\'rganish',
-          icon: 'fas fa-language',
-          duration: '4 oy'
-        },
-        {
-          id: 11,
-          title: 'Matematika',
-          description: 'Dasturlash uchun matematik asoslar',
-          icon: 'fas fa-square-root-alt',
-          duration: '3 oy'
-        },
-        {
-        id: 12,
-        title: "Back-End",
-        description:"Python va Djangoda Dasturlash",
-        icon: "fab fa-python",
-        duration: "8 oy"
-        }
-      ]
+            {
+                id: 1,
+                title: 'Veb-sayt yaratish',
+                description: 'Zamonaviy, mobil moslashuvchan veb-saytlar va landing pagelar ishlab chiqish',
+                icon: 'fas fa-globe',
+                duration: 'Loyiha hajmiga qarab'
+            },
+            {
+                id: 2,
+                title: 'Mobil ilova ishlab chiqish',
+                description: 'Android va iOS uchun native va hybrid mobil ilovalar',
+                icon: 'fas fa-mobile-alt',
+                duration: 'Loyiha hajmiga qarab'
+            },
+            {
+                id: 3,
+                title: 'IT konsalting',
+                description: 'IT strategiya, tizim tanlash va biznes jarayonlarini optimallashtirish bo‘yicha maslahatlar',
+                icon: 'fas fa-lightbulb',
+                duration: 'Kelishuv asosida'
+            },
+            {
+                id: 4,
+                title: 'Server va tarmoq xizmatlari',
+                description: 'Server sozlash, bulutli xizmatlar va tarmoq infratuzilmasi qurish',
+                icon: 'fas fa-network-wired',
+                duration: 'Kelishuv asosida'
+            },
+            {
+                id: 5,
+                title: 'Kiberxavfsizlik',
+                description: 'Ma’lumotlarni himoyalash, xavfsizlik auditi va zaifliklarni aniqlash',
+                icon: 'fas fa-shield-alt',
+                duration: 'Kelishuv asosida'
+            },
+            {
+                id: 6,
+                title: 'Texnik qo‘llab-quvvatlash',
+                description: 'IT tizimlarini 24/7 kuzatish va muammolarni tezkor hal qilish',
+                icon: 'fas fa-headset',
+                duration: 'Oylik yoki yillik'
+            },
+            {
+                id: 7,
+                title: 'Ma’lumotlar bazasi ishlari',
+                description: 'MySQL, PostgreSQL va boshqa DBMS larni sozlash, optimallashtirish va boshqarish',
+                icon: 'fas fa-database',
+                duration: 'Kelishuv asosida'
+            },
+            {
+                id: 8,
+                title: 'UI/UX dizayn',
+                description: 'Foydalanuvchilar uchun qulay interfeys va dizayn yechimlari yaratish',
+                icon: 'fas fa-pencil-ruler',
+                duration: 'Loyiha hajmiga qarab'
+            },
+            {
+                id: 9,
+                title: 'ERP va CRM tizimlarini joriy etish',
+                description: 'Biznes jarayonlarini avtomatlashtirish uchun ERP/CRM tizimlari integratsiyasi',
+                icon: 'fas fa-cogs',
+                duration: 'Kelishuv asosida'
+            },
+            {
+                id: 10,
+                title: 'Bulutli xizmatlar',
+                description: 'AWS, Azure, Google Cloud va boshqa platformalarda xizmatlar',
+                icon: 'fas fa-cloud',
+                duration: 'Kelishuv asosida'
+            }
+        ]
     }
   },
   computed: {
@@ -214,7 +200,7 @@ export default {
   height: 100%;
   pointer-events: none;
   z-index: -2;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #754ea6 0%, #6879e3 100%);
 }
 
 .floating-bg::before {
@@ -255,7 +241,7 @@ export default {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 0 30px rgba(153, 0, 255, 0.3);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.392);
 }
 
 /* Grid Layout */
@@ -342,7 +328,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(51, 55, 56, 0.3);
   color: white;
   font-size: 1.3rem;
   transition: transform 0.3s ease;

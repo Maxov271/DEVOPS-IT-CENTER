@@ -161,7 +161,7 @@ const API_BASE = 'https://devops-itc.alwaysdata.net'
 // Computed
 const isFormValid = computed(() => {
   const { firstName, lastName, certificateId } = searchForm.value
-  return firstName.trim() && lastName.trim() && certificateId.trim()
+  return firstName.trim() && lastName.trim() || certificateId.trim()
 })
 
 const fullName = computed(() => {
@@ -179,10 +179,20 @@ const searchCertificates = async () => {
   certificates.value = []
 
   try {
-    const params = new URLSearchParams({
-      fullname: fullName.value,
-      certificate_id: searchForm.value.certificateId.trim()
-    })
+    const params = new URLSearchParams();
+    const certId = searchForm.value.certificateId?.trim();
+
+    if (certId && searchForm.value.firstName.trim() && searchForm.value.lastName.trim()) {
+      // Ikkalasi ham bo'lsa, ikkalasini ham yuboramiz
+      params.append('certificate_id', certId);
+      params.append('fullname', fullName.value);
+    } else if (certId) {
+      // Faqat ID bo'lsa
+      params.append('certificate_id', certId);
+    } else {
+      // Faqat fullname bo'lsa
+      params.append('fullname', fullName.value);
+    }
     
     const response = await fetch(`${API_BASE}/api/certificates/?${params}`, {
       headers: { 'Accept': 'application/json' }
