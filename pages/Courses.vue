@@ -171,7 +171,7 @@ export default {
   },
   methods: {
     openCourse(course) {
-      this.$emit('course-selected', course);
+     this.$rotuer.push({name: 'contact', query: {selected: course.title}});
       console.log('Kurs tanlandi:', course.title);
     },
     toggleShowAll() {

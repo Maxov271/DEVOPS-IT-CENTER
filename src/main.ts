@@ -20,14 +20,19 @@ const routes = [
     component: () => import('../pages/Blog.vue')
   },
   {
-    path: '/kurslar',
+    path: '/course',
     name: 'course',
     component: () => import('../pages/Courses.vue')
   },  
   {
-    path: '/xizmatlar',
-    name: 'course',
+    path: '/service',
+    name: 'Service',
     component: () => import('../pages/Service.vue')
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: () => import("../pages/ContactSection.vue")
   },
 ]
 

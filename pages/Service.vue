@@ -55,7 +55,7 @@ export default {
       courses: [
             {
                 id: 1,
-                title: 'Veb-sayt yaratish',
+                title: 'web-sayt yaratish',
                 description: 'Zamonaviy, mobil moslashuvchan veb-saytlar va landing pagelar ishlab chiqish',
                 icon: 'fas fa-globe',
                 duration: 'Loyiha hajmiga qarab'
@@ -70,7 +70,7 @@ export default {
             {
                 id: 3,
                 title: 'IT konsalting',
-                description: 'IT strategiya, tizim tanlash va biznes jarayonlarini optimallashtirish bo‘yicha maslahatlar',
+                description: 'IT strategiya, tizim tanlash va biznes jarayonlarini optimallashtirish bo\'yicha maslahatlar',
                 icon: 'fas fa-lightbulb',
                 duration: 'Kelishuv asosida'
             },
@@ -84,20 +84,20 @@ export default {
             {
                 id: 5,
                 title: 'Kiberxavfsizlik',
-                description: 'Ma’lumotlarni himoyalash, xavfsizlik auditi va zaifliklarni aniqlash',
+                description: 'Ma\'lumotlarni himoyalash, xavfsizlik auditi va zaifliklarni aniqlash',
                 icon: 'fas fa-shield-alt',
                 duration: 'Kelishuv asosida'
             },
             {
                 id: 6,
-                title: 'Texnik qo‘llab-quvvatlash',
+                title: 'Texnik qo\'llab-quvvatlash',
                 description: 'IT tizimlarini 24/7 kuzatish va muammolarni tezkor hal qilish',
                 icon: 'fas fa-headset',
                 duration: 'Oylik yoki yillik'
             },
             {
                 id: 7,
-                title: 'Ma’lumotlar bazasi ishlari',
+                title: 'Ma\'lumotlar bazasi ishlari',
                 description: 'MySQL, PostgreSQL va boshqa DBMS larni sozlash, optimallashtirish va boshqarish',
                 icon: 'fas fa-database',
                 duration: 'Kelishuv asosida'
@@ -122,6 +122,13 @@ export default {
                 description: 'AWS, Azure, Google Cloud va boshqa platformalarda xizmatlar',
                 icon: 'fas fa-cloud',
                 duration: 'Kelishuv asosida'
+            },
+            {
+              id: 11,
+              title: 'Telegram bot',
+              description: 'Har qanday maqsaddagi telegram botlar ishlab chiqish',
+              icon: 'fas fa-robot',
+              duration: "Kelishuv asosoida"
             }
         ]
     }
@@ -157,8 +164,14 @@ export default {
   },
   methods: {
     openCourse(course) {
-      this.$emit('course-selected', course);
-      console.log('Kurs tanlandi:', course.title);
+      // Contact sahifasiga o'tish va tanlangan xizmatni uzatish
+      this.$router.push({
+        name: 'Contact', 
+        query: { 
+          service: course.title 
+        }
+      });
+      console.log('Xizmat tanlandi:', course.title);
     },
     toggleShowAll() {
       this.showAllCourses = !this.showAllCourses;
