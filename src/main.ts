@@ -10,7 +10,7 @@ const routes = [
     component: () => import('./views/Home.vue')
   },
   { 
-    path: '/certificates', 
+    path: '/certificate/certificate_mainpage.html', 
     name: 'Certificates', 
     component: () => import('../pages/Certificates.vue') 
   },
@@ -38,7 +38,17 @@ const routes = [
 
 const router = createRouter({   
   history: createWebHistory(),   
-  routes 
+  routes,
+  // Scroll behavior qo'shildi
+  scrollBehavior(to, from, savedPosition) {
+    // Agar foydalanuvchi browser orqaga/oldinga tugmasini bosgan bo'lsa
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      // Har doim sahifa yuqorisiga scroll qilish
+      return { top: 0 }
+    }
+  }
 })  
 
 const app = createApp(App) 

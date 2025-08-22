@@ -11,13 +11,15 @@
       <!-- Left Content -->
       <div class="cta-text">
         <h2 class="cta-title">
-          Kasb tanlashdagi birinchi<br>
-          yordamni beramiz!
+          {{ formData.service }}<br>
+          <h3>
+            haqida ma'lumot beramiz!
+          </h3>
         </h2>
-        
+
         <!-- Service-specific message when service is selected -->
         <p v-if="formData.service" class="cta-description service-message">
-          <strong>{{ formData.service }}</strong> haqida ma'lumot beramiz! Bizga ism va raqamingizni qoldiring, biz sizga o'zimiz aloqa qilamiz.
+          Ism va raqamingizni qoldiring, biz sizga aloqa chiqamiz!
         </p>
         
         <!-- Default message when no service selected -->
@@ -423,15 +425,23 @@ export default {
 }
 
 .cta-title {
-  font-size: 2.8rem;
+  font-size: 3.3rem;
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1.5rem;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
+.cta-title h3 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
 .cta-description {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 500;
   line-height: 1.6;
   opacity: 0.9;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);

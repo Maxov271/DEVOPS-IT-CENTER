@@ -41,7 +41,8 @@
 
       <!-- Course Cards -->
       <div class="course-cards">
-        <div class="course-card course-card-primary">
+        <!-- Kurslar Card - /course ga yo'naltiradi -->
+        <router-link to="/course" class="course-card course-card-primary">
           <div class="course-header">
             <div class="course-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -78,9 +79,10 @@
               <polyline points="12,5 19,12 12,19"></polyline>
             </svg>
           </button>
-        </div>
+        </router-link>
 
-        <div class="course-card course-card-secondary">
+        <!-- Xizmatlar Card - /service ga yo'naltiradi -->
+        <router-link to="/service" class="course-card course-card-secondary">
           <div class="course-header">
             <div class="course-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -94,7 +96,7 @@
           <p class="course-description">
             IT sohasida keng qo'lamli xizmatlarni taqdim etadi. 
             Dasturlash, Grafik dizayn, SMM va Kompyuter ta'mirlash 
-            ishlarini o'z kasbini ustalaringa ishoning!
+            ishlarini o'z kasbini ustalariga ishoning!
           </p>
           
           <div class="course-visual">
@@ -113,7 +115,7 @@
               <polyline points="12,5 19,12 12,19"></polyline>
             </svg>
           </button>
-        </div>
+        </router-link>
       </div>
 
       <!-- Statistics Section -->

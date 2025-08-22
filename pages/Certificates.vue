@@ -88,11 +88,11 @@
                   <EyeIcon class="action-icon" />
                 </button>
                 <!-- Optimized link tag for downloading certificate -->
-                <a 
+                <a
                   v-if="cert.certificate_url"
-                  :href="cert.certificate_url" 
+                  :href="getDownloadUrl(cert.certificate_url)"
                   :download="`certificate_${cert.certificate_id || cert.id}.pdf`"
-                  class="action-btn download-btn" 
+                  class="action-btn download-btn"
                   title="Yuklab olish"
                   target="_blank"
                 >
@@ -143,6 +143,13 @@ import {
   Calendar as CalendarIcon,
   Eye as EyeIcon
 } from 'lucide-vue-next'
+
+const getDownloadUrl = (url) => {
+  const match = url.match(/(?:id=)([^&]+)/);
+  if (!match) return url;
+  const fileId = match[1];
+  return `https://drive.google.com/uc?id=${fileId}&export=download`;
+};
 
 // State
 const searchForm = ref({

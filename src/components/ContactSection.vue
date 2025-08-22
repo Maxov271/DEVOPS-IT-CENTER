@@ -72,6 +72,19 @@
               Yuborilmoqda...
             </span>
           </button>
+          
+          <!-- Success Message -->
+          <transition name="success">
+            <div v-if="showSuccess" class="success-message">
+              <div class="success-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="success-content">
+                <h4>Muvaffaqiyatli yuborildi!</h4>
+                <p>Tez orada siz bilan bog'lanamiz</p>
+              </div>
+            </div>
+          </transition>
         </form>
       </div>
     </div>
@@ -84,6 +97,7 @@ export default {
   data() {
     return {
       isLoading: false,
+      showSuccess: false,
       formData: {
         name: '',
         phone: '+998 ',
@@ -100,6 +114,29 @@ export default {
     }
   },
   methods: {
+    formatPhone(event) {
+      let value = event.target.value.replace(/\D/g, '');
+      if (!value.startsWith('998')) {
+        value = '998' + value;
+      }
+      if (value.length > 12) {
+        value = value.substring(0, 12);
+      }
+      
+      let formatted = '+' + value;
+      if (value.length > 3) {
+        formatted = '+' + value.substring(0, 3) + ' ' + value.substring(3);
+      }
+      if (value.length > 5) {
+        formatted = '+' + value.substring(0, 3) + ' ' + value.substring(3, 5) + ' ' + value.substring(5);
+      }
+      if (value.length > 8) {
+        formatted = '+' + value.substring(0, 3) + ' ' + value.substring(3, 5) + ' ' + value.substring(5, 8) + ' ' + value.substring(8);
+      }
+      
+      this.formData.phone = formatted;
+    },
+
     async submitForm() {
       if (!this.formData.name || !this.formData.phone || !this.formData.consent) {
         return;
@@ -108,16 +145,36 @@ export default {
       this.isLoading = true;
 
       try {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        const leadData = {
+          fullname: this.formData.name.trim(),
+          phone_number: this.formData.phone,
+          course: null, // Course field mavjud emas
+          is_online: true,
+          is_offline: false,
+          is_agree: this.formData.consent
+        };
+
+        console.log('Sending data:', leadData);
         
-        // Emit event or handle success
+        const response = await fetch('https://devops-itc.alwaysdata.net/api/leads/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(leadData)
+        });
+        
+        if (!response.ok) {
+          const errorData = await response.text();
+          console.error('API Error Response:', errorData);
+          throw new Error(`HTTP error! status: ${response.status}, details: ${errorData}`);
+        }
+        
+        const responseData = await response.json();
+        console.log('Lead created successfully:', responseData);
+        
         this.$emit('form-submitted', this.formData);
-        
-        // Show success message
-        this.showSuccess();
-        
-        // Reset form
+        this.showSuccessMessage();
         this.resetForm();
         
       } catch (error) {
@@ -136,19 +193,79 @@ export default {
       };
     },
     
-    showSuccess() {
-      // You can emit event or show notification
-      console.log('So\'rov muvaffaqiyatli yuborildi!');
+    showSuccessMessage() {
+      // Success xabarini ko'rsatish
+      this.showSuccess = true;
+      
+      // 5 soniya keyin success xabarini yashirish
+      setTimeout(() => {
+        this.showSuccess = false;
+      }, 5000);
     },
     
     showError() {
-      console.log('Xatolik yuz berdi. Qaytadan urinib ko\'ring.');
+      alert('Xatolik yuz berdi. Iltimos, qaytadan urinib ko\'ring.');
     }
   }
 }
 </script>
 
 <style scoped>
+.success-message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  margin-top: 16px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.success-content h4 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.success-content p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Success Transition */
+.success-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.success-leave-active {
+  transition: all 0.3s ease-in;
+}
+
+.success-enter-from {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.success-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
 .cta-container {
   position: relative;
   background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);

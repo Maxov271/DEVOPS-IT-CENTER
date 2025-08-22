@@ -132,7 +132,7 @@ export default {
         },
         {
         id: 12,
-        title: "Back-End",
+        title: "Backend dasturlash",
         description:"Python va Djangoda Dasturlash",
         icon: "fab fa-python",
         duration: "8 oy"
@@ -171,8 +171,14 @@ export default {
   },
   methods: {
     openCourse(course) {
-     this.$rotuer.push({name: 'contact', query: {selected: course.title}});
-      console.log('Kurs tanlandi:', course.title);
+      // Contact sahifasiga o'tish va tanlangan xizmatni uzatish
+      this.$router.push({
+        name: 'Contact', 
+        query: { 
+          service: course.title 
+        }
+      });
+      console.log('Xizmat tanlandi:', course.title);
     },
     toggleShowAll() {
       this.showAllCourses = !this.showAllCourses;

@@ -23,7 +23,7 @@
           <transition name="dropdown">
             <div v-if="activeDropdown === 'kurslar'" class="dropdown-menu">
 
-              <a href="#" class="dropdown-item">
+              <a href="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-desktop"></i>
                 </div>
@@ -33,7 +33,7 @@
                 </div>
               </a>
 
-              <a href="#" class="dropdown-item">
+              <a href="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-award"></i>
                 </div>
@@ -43,7 +43,7 @@
                 </div>
               </a>
 
-              <a href="#" class="dropdown-item">
+              <a href="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-book-open"></i>
                 </div>
@@ -53,7 +53,7 @@
                 </div>
               </a>
 
-              <a href="#" class="dropdown-item">
+              <a href="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-laptop-code"></i>
                 </div>
@@ -63,7 +63,7 @@
                 </div>
               </a>
 
-              <a href="#" class="dropdown-item">
+              <a href="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-pen-nib"></i>
                 </div>
@@ -73,7 +73,7 @@
                 </div>
               </a>
 
-              <a href="#" class="dropdown-item">
+              <a href="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-cube"></i>
                 </div>
@@ -83,7 +83,7 @@
                 </div>
               </a>
 
-              <a href="#" class="dropdown-item">
+              <a href="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-mobile"></i>
                 </div>
@@ -93,7 +93,7 @@
                 </div>
               </a>
 
-              <a href="#" class="dropdown-item">
+              <a href="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-calculator"></i>
                 </div>
@@ -103,7 +103,7 @@
                 </div>
               </a>
 
-              <a href="#" class="dropdown-item">
+              <a href="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-robot"></i>
                 </div>
@@ -113,7 +113,7 @@
                 </div>
               </a>
 
-              <a href="#" class="dropdown-item">
+              <a href="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-book-open-reader"></i>
                 </div>
@@ -123,7 +123,7 @@
                 </div>
               </a>
 
-              <a href="#" class="dropdown-item">
+              <a href="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-square-root-variable"></i>
                 </div>
@@ -147,7 +147,7 @@
           </button>
           <transition name="dropdown">
             <div v-if="activeDropdown === 'xizmatlar'" class="dropdown-menu">
-              <a href="#" class="dropdown-item">
+              <a href="/service" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-pen-ruler"></i>
                 </div>
@@ -156,7 +156,7 @@
                   <div class="item-desc">Logo, Vizitka, Post, ...</div>
                 </div>
               </a>
-              <a href="#" class="dropdown-item">
+              <a href="/service" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-code"></i>
                 </div>
@@ -165,7 +165,7 @@
                   <div class="item-desc">Zamonaviy yechimga ega websaytlar yaratish</div>
                 </div>
               </a>
-              <a href="#" class="dropdown-item">
+              <a href="/service" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-store"></i>
                 </div>
@@ -174,7 +174,7 @@
                   <div class="item-desc">Biznesingizni bir qadam oldinga olib chiqish</div>
                 </div>
               </a>
-              <a href="#" class="dropdown-item">
+              <a href="/service" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-globe"></i>
                 </div>
@@ -183,7 +183,7 @@
                   <div class="item-desc">Ijtimoiy tarmoq orqali qilinadigan ishlar</div>
                 </div>
               </a>
-              <a href="#" class="dropdown-item">
+              <a href="/service" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-wrench"></i>  
                 </div>
@@ -192,7 +192,7 @@
                   <div class="item-desc">OS, Driverlar o'rnatish va boshqalar</div>
                 </div>
               </a>
-              <a href="#" class="dropdown-item">
+              <a href="/service" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-user-astronaut"></i>
                 </div>
@@ -201,7 +201,7 @@
                   <div class="item-desc">Telegram bot va mini-applar yaratish</div>
                 </div>
               </a>
-              <a href="#" class="dropdown-item">
+              <a href="/service" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-laptop"></i>
                 </div>
@@ -225,7 +225,7 @@
 
       <!-- Right Section -->
       <div class="nav-actions">
-        <router-link to="/certificates">
+        <router-link to="/certificate/certificate_mainpage.html">
           <button class="cert-btn">
             <i class="cert-icon fas fa-award" style="transform: translateY(3px);"></i>
             Sertifikatlar
@@ -260,17 +260,17 @@
           </button>
           <transition name="mobile-dropdown">
             <div v-if="mobileDropdowns.kurslar" class="mobile-submenu">
-              <a href="#" class="mobile-sublink">Kompytuer Savodxonligi</a>
-              <a href="#" class="mobile-sublink">Malaka Oshirish (Soha xodimlari)</a>
-              <a href="#" class="mobile-sublink">Foundation (ITga kirish)</a>
-              <a href="#" class="mobile-sublink">Front-End Dasturlash</a>
-              <a href="#" class="mobile-sublink">Grafik va Web dizayn</a>
-              <a href="#" class="mobile-sublink">3D Modeling (3D Max, AutoCad)</a>
-              <a href="#" class="mobile-sublink">SMM + Mobilografiya</a>
-              <a href="#" class="mobile-sublink">1C Buxgalteriya</a>
-              <a href="#" class="mobile-sublink">Robototexnika</a>
-              <a href="#" class="mobile-sublink">IT English - Ingliz tili</a>
-              <a href="#" class="mobile-sublink">Matematika</a>
+              <a href="/course" class="mobile-sublink">Kompytuer Savodxonligi</a>
+              <a href="/course" class="mobile-sublink">Malaka Oshirish (Soha xodimlari)</a>
+              <a href="/course" class="mobile-sublink">Foundation (ITga kirish)</a>
+              <a href="/course" class="mobile-sublink">Front-End Dasturlash</a>
+              <a href="/course" class="mobile-sublink">Grafik va Web dizayn</a>
+              <a href="/course" class="mobile-sublink">3D Modeling (3D Max, AutoCad)</a>
+              <a href="/course" class="mobile-sublink">SMM + Mobilografiya</a>
+              <a href="/course" class="mobile-sublink">1C Buxgalteriya</a>
+              <a href="/course" class="mobile-sublink">Robototexnika</a>
+              <a href="/course" class="mobile-sublink">IT English - Ingliz tili</a>
+              <a href="/course" class="mobile-sublink">Matematika</a>
             </div>
           </transition>
         </div>
@@ -283,15 +283,15 @@
             </svg>
           </button>
           <transition name="mobile-dropdown">
-<div v-if="mobileDropdowns.xizmatlar" class="mobile-submenu">
-  <a href="#" class="mobile-sublink">Grafik dizaynerlik ishlari</a>
-  <a href="#" class="mobile-sublink">Websayt tayyorlash</a>
-  <a href="#" class="mobile-sublink">SMM xizmatlar</a>
-  <a href="#" class="mobile-sublink">Online xizmatlar</a>
-  <a href="#" class="mobile-sublink">Kompyuterni tamirlash</a>
-  <a href="#" class="mobile-sublink">Telegram Bot</a>
-  <a href="#" class="mobile-sublink">Kompytuer sotuvi</a>
-</div>
+            <div v-if="mobileDropdowns.xizmatlar" class="mobile-submenu">
+              <a href="/service" class="mobile-sublink">Grafik dizaynerlik ishlari</a>
+              <a href="/service" class="mobile-sublink">Websayt tayyorlash</a>
+              <a href="/service" class="mobile-sublink">SMM xizmatlar</a>
+              <a href="/service" class="mobile-sublink">Online xizmatlar</a>
+              <a href="/service" class="mobile-sublink">Kompyuterni tamirlash</a>
+              <a href="/service" class="mobile-sublink">Telegram Bot</a>
+              <a href="/service" class="mobile-sublink">Kompytuer sotuvi</a>
+            </div>
           </transition>
         </div>
 

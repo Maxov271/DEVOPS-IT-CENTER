@@ -47,7 +47,7 @@
 
 <script>
 export default {
-  name: 'AppCourses',
+  name: 'Service',
   data() {
     return {
       showAllCourses: false,

@@ -1,4 +1,4 @@
-<template>
+  <template>
   <div class="location-container">
     <!-- Floating background elements -->
     <div class="floating-bg">
@@ -30,7 +30,7 @@
 
           <div class="info-section">
             <div class="info-label">Ish vaqti:</div>
-            <p>Dushanbadan Jumagacha<br>08:00 dan 18:00 gacha</p>
+            <p>Dushanbadan Shanbagacha<br>08:00 dan 18:00 gacha</p>
           </div>
 
           <div class="info-section">

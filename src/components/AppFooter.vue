@@ -29,10 +29,10 @@
         <div class="footer-section footer-links">
           <h4 class="section-title">Ma'lumotlar</h4>
           <ul class="link-list">
-            <li><a href="#courses" class="footer-link">Kurslar</a></li>
-            <li><a href="#services" class="footer-link">Xizmatlar</a></li>
+            <li><a href="/course" class="footer-link">Kurslar</a></li>
+            <li><a href="/service" class="footer-link">Xizmatlar</a></li>
             <li><router-link to="/blog" class="footer-link">Blog</router-link></li>
-            <li><router-link to="/certificates" class="footer-link">Sertifikatlar</router-link></li>
+            <li><router-link to="/certificate/certificate_mainpage.html" class="footer-link">Sertifikatlar</router-link></li>
             <li><a href="#about" class="footer-link">Biz haqimizda</a></li>
           </ul>
         </div>
@@ -41,20 +41,20 @@
         <div class="footer-section footer-certificates">
           <div class="certificates-grid">
             <div class="certificate-item">
-              <a href="/assets/images/certificate__footer-card.png" target="_blank" class="certificate-image">
-                <img src="/assets/images/certificate__footer-card.png" alt="">
+              <a href="/assets/images/guvohnoma.webp" target="_blank" class="certificate-image">
+                <img src="/assets/images/guvohnoma.webp" alt="guvohnoma">
               </a>
               <span class="certificate-label">Guvohnoma</span>
             </div>
-            <div class="certificate-item">
-              <a href="/assets/images/residency__footer-card.png" target="_blank" class="certificate-image">
-                <img src="/assets/images/residency__footer-card.png" alt="it_park_rezidency">
+            <div class="certificate-item" id="">
+              <a href="/assets/images/certificate.png" target="_blank" class="itpr">
+                <img src="/assets/images/certificate.png" alt="it_park_rezidency">
               </a>
               <span class="certificate-label">IT Park rezidentlik</span>
             </div>
             <div class="certificate-item">
-              <a href="/assets/images/confirmation__footer-card.png" target="_blank" class="certificate-image">
-                <img src="/assets/images/confirmation__footer-card.png" alt="confirmation">
+              <a href="/assets/images/Litsenziya (2)-1.webp" target="_blank" class="certificate-image">
+                <img src="/assets/images/Litsenziya (2)-1.webp" alt="confirmation">
               </a>
               <span class="certificate-label">Tasdiqlama</span>
             </div>
@@ -70,16 +70,16 @@
           </div>
           
           <div class="social-links">
-            <a href="#" class="social-link instagram" aria-label="Instagram">
+            <a href="https://www.instagram.com/devops_itcenter/" class="social-link instagram" aria-label="Instagram">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="#" class="social-link telegram" aria-label="Telegram">
+            <a href="https://t.me/devops_itcenter" class="social-link telegram" aria-label="Telegram">
               <i class="fab fa-telegram-plane"></i>
             </a>
             <a href="#" class="social-link facebook" aria-label="Facebook">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#" class="social-link youtube" aria-label="YouTube">
+            <a href="https://www.youtube.com/@DEVOPS_ITCENTER" class="social-link youtube" aria-label="YouTube">
               <i class="fab fa-youtube"></i>
             </a>
           </div>
@@ -266,9 +266,15 @@ export default {
   text-align: center;
 }
 
+.certificate-item:hover img {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  transform: translateY(-5px);
+  border-radius: 12px; /* yumaloqligi saqlanib qolishi uchun */
+}
+
 .certificate-image {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 200px;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -277,18 +283,35 @@ export default {
   margin-bottom: .2rem;
 }
 
+.itpr {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-bottom: .2rem; 
+}
 
-.certificate-item:hover .certificate-image {
+/* .certificate-item:hover .itpr {
   background: rgba(0, 212, 255, 0.2);
   border-color: rgba(0, 212, 255, 0.4);
   box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
   transform: translateY(-5px);
-}
+} */
+
+/* .certificate-item:hover .certificate-image {
+  background: rgba(0, 212, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  transform: translateY(-5px);
+} */
 
 .certificate-label {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.8);
-  line-height: 1.3;
+  line-height: 1;
 }
 
 /* Footer Bottom */
