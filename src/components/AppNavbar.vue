@@ -225,7 +225,7 @@
 
       <!-- Right Section -->
       <div class="nav-actions">
-        <router-link to="/certificate/certificate_mainpage.html">
+        <router-link to="/certificate">
           <button class="cert-btn">
             <i class="cert-icon fas fa-award" style="transform: translateY(3px);"></i>
             Sertifikatlar
@@ -297,7 +297,7 @@
 
         <div class="mobile-actions">
           <div class="router-links">
-            <router-link to="/certificates">
+            <router-link to="/certificate">
               <button class="mobile-cert-btn">Sertifikatlar</button>
             </router-link>
             <router-link to="/blog">
