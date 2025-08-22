@@ -643,7 +643,11 @@ export default {
   .cta-title {
     font-size: 2.2rem;
   }
-  
+
+  .cta-title h3 {
+    font-size: 1.7rem;
+  }
+
   .cta-description {
     font-size: 1rem;
   }
@@ -671,6 +675,9 @@ export default {
     font-size: 1.8rem;
   }
   
+  .cta-title h3 {
+    font-size: 1.2rem;
+  }
   .cta-content {
     gap: 2rem;
   }
