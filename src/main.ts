@@ -40,7 +40,7 @@ const router = createRouter({
   history: createWebHistory(),   
   routes,
   // Scroll behavior qo'shildi
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(_to, _from, savedPosition) {
     // Agar foydalanuvchi browser orqaga/oldinga tugmasini bosgan bo'lsa
     if (savedPosition) {
       return savedPosition
