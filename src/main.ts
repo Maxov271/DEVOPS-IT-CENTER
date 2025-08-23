@@ -11,6 +11,7 @@ const routes = [
   },
   { 
     path: '/certificate', 
+    alias: ['/certificate/certificate_mainpage.html'],
     name: 'Certificates', 
     component: () => import('../pages/Certificates.vue') 
   },

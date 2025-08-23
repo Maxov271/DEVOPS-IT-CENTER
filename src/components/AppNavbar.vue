@@ -23,7 +23,7 @@
           <transition name="dropdown">
             <div v-if="activeDropdown === 'kurslar'" class="dropdown-menu">
 
-              <a href="/course" class="dropdown-item">
+              <router-link to="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-desktop"></i>
                 </div>
@@ -31,9 +31,9 @@
                   <div class="item-title">Kompytuer Savodxonligi</div>
                   <div class="item-desc">2 oy davom etadi</div>
                 </div>
-              </a>
+              </router-link>
 
-              <a href="/course" class="dropdown-item">
+              <router-link to="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-award"></i>
                 </div>
@@ -41,9 +41,9 @@
                   <div class="item-title">Malaka Oshirish (Soha xodimlari)</div>
                   <div class="item-desc">1 oy davom etadi</div>
                 </div>
-              </a>
+              </router-link>
 
-              <a href="/course" class="dropdown-item">
+              <router-link to="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-book-open"></i>
                 </div>
@@ -51,9 +51,9 @@
                   <div class="item-title">Foundation (ITga kirish)</div>
                   <div class="item-desc">1 oy davom etadi</div>
                 </div>
-              </a>
+              </router-link>
 
-              <a href="/course" class="dropdown-item">
+              <router-link to="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-laptop-code"></i>
                 </div>
@@ -61,9 +61,9 @@
                   <div class="item-title">Front-End Dasturlash</div>
                   <div class="item-desc">8 oy davom etadi</div>
                 </div>
-              </a>
+              </router-link>
 
-              <a href="/course" class="dropdown-item">
+              <router-link to="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-pen-nib"></i>
                 </div>
@@ -71,9 +71,9 @@
                   <div class="item-title">Grafik va Web dizayn</div>
                   <div class="item-desc">6 oy davom etadi</div>
                 </div>
-              </a>
+              </router-link>
 
-              <a href="/course" class="dropdown-item">
+              <router-link to="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-cube"></i>
                 </div>
@@ -81,9 +81,9 @@
                   <div class="item-title">3D Modeling (3D Max, AutoCad)</div>
                   <div class="item-desc">6 oy davom etadi</div>
                 </div>
-              </a>
+              </router-link>
 
-              <a href="/course" class="dropdown-item">
+              <router-link to="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-mobile"></i>
                 </div>
@@ -91,9 +91,9 @@
                   <div class="item-title">SMM + Mobilografiya</div>
                   <div class="item-desc">3 oy davom etadi</div>
                 </div>
-              </a>
+              </router-link>
 
-              <a href="/course" class="dropdown-item">
+              <router-link to="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-calculator"></i>
                 </div>
@@ -101,9 +101,9 @@
                   <div class="item-title">1C Buxgalteriya</div>
                   <div class="item-desc">3 oy davom etadi</div>
                 </div>
-              </a>
+              </router-link>
 
-              <a href="/course" class="dropdown-item">
+              <router-link to="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-robot"></i>
                 </div>
@@ -111,9 +111,9 @@
                   <div class="item-title">Robototexnika</div>
                   <div class="item-desc">3 oy davom etadi</div>
                 </div>
-              </a>
+              </router-link>
 
-              <a href="/course" class="dropdown-item">
+              <router-link to="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-book-open-reader"></i>
                 </div>
@@ -121,9 +121,9 @@
                   <div class="item-title">IT English - Ingliz tili</div>
                   <div class="item-desc">6 oydan oshiqroq davom etadi</div>
                 </div>
-              </a>
+              </router-link>
 
-              <a href="/course" class="dropdown-item">
+              <router-link to="/course" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-square-root-variable"></i>
                 </div>
@@ -131,7 +131,7 @@
                   <div class="item-title">Matematika</div>
                   <div class="item-desc">6 oydan oshiqroq davom etadi</div>
                 </div>
-              </a>
+              </router-link>
 
             </div>
           </transition>
@@ -147,7 +147,7 @@
           </button>
           <transition name="dropdown">
             <div v-if="activeDropdown === 'xizmatlar'" class="dropdown-menu">
-              <a href="/service" class="dropdown-item">
+              <router-link to="/service" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-pen-ruler"></i>
                 </div>
@@ -155,8 +155,8 @@
                   <div class="item-title">Grafik dizaynerlik ishlari</div>
                   <div class="item-desc">Logo, Vizitka, Post, ...</div>
                 </div>
-              </a>
-              <a href="/service" class="dropdown-item">
+              </router-link>
+              <router-link to="/service" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-code"></i>
                 </div>
@@ -164,8 +164,8 @@
                   <div class="item-title">Websayt tayyorlash</div>
                   <div class="item-desc">Zamonaviy yechimga ega websaytlar yaratish</div>
                 </div>
-              </a>
-              <a href="/service" class="dropdown-item">
+              </router-link>
+              <router-link to="/service" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-store"></i>
                 </div>
@@ -173,8 +173,8 @@
                   <div class="item-title">SMM xizmatlar</div>
                   <div class="item-desc">Biznesingizni bir qadam oldinga olib chiqish</div>
                 </div>
-              </a>
-              <a href="/service" class="dropdown-item">
+              </router-link>
+              <router-link to="/service" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-globe"></i>
                 </div>
@@ -182,8 +182,8 @@
                   <div class="item-title">Online xizmatlar</div>
                   <div class="item-desc">Ijtimoiy tarmoq orqali qilinadigan ishlar</div>
                 </div>
-              </a>
-              <a href="/service" class="dropdown-item">
+              </router-link>
+              <router-link to="/service" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-wrench"></i>  
                 </div>
@@ -191,8 +191,8 @@
                   <div class="item-title">Kompyuterni tamirlash</div>
                   <div class="item-desc">OS, Driverlar o'rnatish va boshqalar</div>
                 </div>
-              </a>
-              <a href="/service" class="dropdown-item">
+              </router-link>
+              <router-link to="/service" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-user-astronaut"></i>
                 </div>
@@ -200,8 +200,8 @@
                   <div class="item-title">Telegram Bot</div>
                   <div class="item-desc">Telegram bot va mini-applar yaratish</div>
                 </div>
-              </a>
-              <a href="/service" class="dropdown-item">
+              </router-link>
+              <router-link to="/service" class="dropdown-item">
                 <div class="item-icon">
                   <i class="fa-solid fa-laptop"></i>
                 </div>
@@ -209,7 +209,7 @@
                   <div class="item-title">Kompytuer sotuvi</div>
                   <div class="item-desc">Arzon narxda kompyuter va noutbuk sotuvi</div>
                 </div>
-              </a>
+              </router-link>
             </div>
             
           </transition>
@@ -260,17 +260,17 @@
           </button>
           <transition name="mobile-dropdown">
             <div v-if="mobileDropdowns.kurslar" class="mobile-submenu">
-              <a href="/course" class="mobile-sublink">Kompytuer Savodxonligi</a>
-              <a href="/course" class="mobile-sublink">Malaka Oshirish (Soha xodimlari)</a>
-              <a href="/course" class="mobile-sublink">Foundation (ITga kirish)</a>
-              <a href="/course" class="mobile-sublink">Front-End Dasturlash</a>
-              <a href="/course" class="mobile-sublink">Grafik va Web dizayn</a>
-              <a href="/course" class="mobile-sublink">3D Modeling (3D Max, AutoCad)</a>
-              <a href="/course" class="mobile-sublink">SMM + Mobilografiya</a>
-              <a href="/course" class="mobile-sublink">1C Buxgalteriya</a>
-              <a href="/course" class="mobile-sublink">Robototexnika</a>
-              <a href="/course" class="mobile-sublink">IT English - Ingliz tili</a>
-              <a href="/course" class="mobile-sublink">Matematika</a>
+              <router-link to="/course" class="mobile-sublink">Kompytuer Savodxonligi</router-link>
+              <router-link to="/course" class="mobile-sublink">Malaka Oshirish (Soha xodimlari)</router-link>
+              <router-link to="/course" class="mobile-sublink">Foundation (ITga kirish)</router-link>
+              <router-link to="/course" class="mobile-sublink">Front-End Dasturlash</router-link>
+              <router-link to="/course" class="mobile-sublink">Grafik va Web dizayn</router-link>
+              <router-link to="/course" class="mobile-sublink">3D Modeling (3D Max, AutoCad)</router-link>
+              <router-link to="/course" class="mobile-sublink">SMM + Mobilografiya</router-link>
+              <router-link to="/course" class="mobile-sublink">1C Buxgalteriya</router-link>
+              <router-link to="/course" class="mobile-sublink">Robototexnika</router-link>
+              <router-link to="/course" class="mobile-sublink">IT English - Ingliz tili</router-link>
+              <router-link to="/course" class="mobile-sublink">Matematika</router-link>
             </div>
           </transition>
         </div>
@@ -284,13 +284,13 @@
           </button>
           <transition name="mobile-dropdown">
             <div v-if="mobileDropdowns.xizmatlar" class="mobile-submenu">
-              <a href="/service" class="mobile-sublink">Grafik dizaynerlik ishlari</a>
-              <a href="/service" class="mobile-sublink">Websayt tayyorlash</a>
-              <a href="/service" class="mobile-sublink">SMM xizmatlar</a>
-              <a href="/service" class="mobile-sublink">Online xizmatlar</a>
-              <a href="/service" class="mobile-sublink">Kompyuterni tamirlash</a>
-              <a href="/service" class="mobile-sublink">Telegram Bot</a>
-              <a href="/service" class="mobile-sublink">Kompytuer sotuvi</a>
+              <router-link to="/service" class="mobile-sublink">Grafik dizaynerlik ishlari</router-link>
+              <router-link to="/service" class="mobile-sublink">Websayt tayyorlash</router-link>
+              <router-link to="/service" class="mobile-sublink">SMM xizmatlar</router-link>
+              <router-link to="/service" class="mobile-sublink">Online xizmatlar</router-link>
+              <router-link to="/service" class="mobile-sublink">Kompyuterni tamirlash</router-link>
+              <router-link to="/service" class="mobile-sublink">Telegram Bot</router-link>
+              <router-link to="/service" class="mobile-sublink">Kompytuer sotuvi</router-link>
             </div>
           </transition>
         </div>
@@ -310,7 +310,6 @@
     </transition>
   </nav>
 </template>
-
 <script>
 export default {
   name: 'AppNavbar',
